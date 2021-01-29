@@ -1,0 +1,4 @@
+Hi client. Created and promoted a Managed Released version of installable package Data Table https://login.salesforce.com/packaging/installPackage.apexp?p0=04t090000006K5oAAE
+Coverage = 
+
+This version includes the following updates:
