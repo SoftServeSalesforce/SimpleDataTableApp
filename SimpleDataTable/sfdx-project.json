@@ -1,11 +1,66 @@
 {
     "packageDirectories": [
         {
-            "path": "force-app",
+            "path": "baseSetup",
+            "package": "Test App: Base Setup",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
             "default": true
+        },
+        {
+            "path": "simpleDataTable",
+            "package": "Test App: Simple Data Table",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "Test App: Base Setup",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "dataTable",
+            "package": "Test App: Data Table",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "Test App: Base Setup",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "Test App: Simple Data Table",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
         }
     ],
-    "namespace": "",
+    "namespace": "TestApplication",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "50.0"
+    "sourceApiVersion": "50.0",
+    "packageAliases": {
+        "Test App: Base Setup": "0Ho09000000KynrCAC",
+        "Test App: Simple Data Table": "0Ho09000000KynwCAC",
+        "Test App: Data Table": "0Ho09000000Kyo1CAC",
+        "Test App: Base Setup@0.1.0-1": "04t090000006JvDAAU",
+        "Test App: Base Setup@0.1.0-2": "04t090000006JvIAAU",
+        "Test App: Simple Data Table@0.1.0-1": "04t090000006JvNAAU",
+        "Test App: Data Table@0.1.0-1": "04t090000006K4gAAE",
+        "Test App: Simple Data Table@0.1.0-2": "04t090000006K4lAAE",
+        "Test App: Data Table@0.1.0-2": "04t090000006K4qAAE",
+        "Test App: Base Setup@0.1.0-3": "04t090000006K4vAAE",
+        "Test App: Simple Data Table@0.1.0-3": "04t090000006K50AAE",
+        "Test App: Data Table@0.1.0-3": "04t090000006K55AAE",
+        "Test App: Base Setup@0.1.0-4": "04t090000006K5AAAU",
+        "Test App: Simple Data Table@0.1.0-4": "04t090000006K5FAAU",
+        "Test App: Data Table@0.1.0-4": "04t090000006K5KAAU",
+        "Test App: Base Setup@0.1.0-5": "04t090000006K5PAAU",
+        "Test App: Simple Data Table@0.1.0-5": "04t090000006K5UAAU",
+        "Test App: Data Table@0.1.0-5": "04t090000006K5ZAAU",
+        "Test App: Base Setup@0.1.0-6": "04t090000006K5eAAE",
+        "Test App: Simple Data Table@0.1.0-6": "04t090000006K5jAAE"
+    }
 }

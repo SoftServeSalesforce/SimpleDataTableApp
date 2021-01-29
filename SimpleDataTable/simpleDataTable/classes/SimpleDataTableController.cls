@@ -1,9 +1,11 @@
 /**
  * Created by Bohdan Dovhan on 1/26/2018.
  */
+@namespaceAccessible
 public inherited sharing virtual class SimpleDataTableController  {
     class InvalidDataException extends Exception{}
     
+    @namespaceAccessible
     protected virtual Map<String, Map<String, Object>> getColumnsMap(
         String sObjectName, List<String> sObjectFieldsNames
     ) {
@@ -24,6 +26,7 @@ public inherited sharing virtual class SimpleDataTableController  {
         }
         return columnsMap;
     }
+    @namespaceAccessible
     protected virtual List<SObject> query(String sObjectName, List<String> sObjectFieldsNames, String whereClause) {
         String query = 'SELECT ' + String.join( sObjectFieldsNames, ', ') + ' FROM ' + sObjectName;
         if (!String.isBlank(whereClause)) {

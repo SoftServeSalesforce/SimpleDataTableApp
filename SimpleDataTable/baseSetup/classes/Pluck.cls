@@ -1,3 +1,4 @@
+@namespaceAccessible
 public class Pluck {
     /**
      * Equivalent to Javascript `x || y` syntax. If x is not null, returns x, otherwise y.
@@ -23,6 +24,7 @@ public class Pluck {
         return keys;
     }
     
+    @namespaceAccessible
     public static List<Map<String, Object>> asList(List<SObject> records) {
         List<Map<String, Object>> models = new List<Map<String, Object>>();
         for (Object instance : (List<Object>) JSON.deserializeUntyped( JSON.serialize( records ) ) ) {

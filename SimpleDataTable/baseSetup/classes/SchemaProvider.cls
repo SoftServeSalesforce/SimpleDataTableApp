@@ -1,3 +1,4 @@
+@NamespaceAccessible
 public class SchemaProvider {
     private static String getNamespace() {
         Schema.DescribeFieldResult dfr = Contact.Branch__c.getDescribe();
@@ -78,6 +79,7 @@ public class SchemaProvider {
         }
         return mapToReturn;
     }
+    @NamespaceAccessible
     public static Map<String, Schema.SObjectField> getFieldMap(String objName) {
         return getDescribe(objName).getDescribe().fields.getMap();
     }

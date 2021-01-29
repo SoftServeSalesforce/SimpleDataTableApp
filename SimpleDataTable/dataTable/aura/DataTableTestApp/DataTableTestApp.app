@@ -1,4 +1,4 @@
-<aura:application extends="force.slds" >
+<aura:application extends="force.slds" access="global">
     <c:DataTable sObjectName="Contact"
                  sObjectFieldsNames="FirstName,LastName,BirthDate,HireDate__c,Branch__c,Position__c,Email,Phone"
                  whereClause="RecordType.Name = 'Employee'"
